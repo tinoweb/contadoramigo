@@ -1,0 +1,7 @@
+Dirf|2017|2016|N||P49VS72|
+RESPO|33614560880|ADERSON DANTAS HUMBERTO|11|970838132|||aderson.humberto@dhtecnologia.com.br|
+DECPJ|20021508000183|DH TECNOLOGIA EIRELI ME                                                                                                                               |0|33614560880|N|N|N|N|N|N|N||
+IDREC|0561|
+BPFDEC|33614560880|ADERSON DANTAS HUMBERTO                                     ||
+RIPTS|0000002400000|
+FIMDirf|

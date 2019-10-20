@@ -1,0 +1,30 @@
+'seo',array('Submenu','teste','teste')
+		);
+
+
+		# Páginas
+		function __construct($pagina){
+
+			switch($pagina):
+
+				# case 'nome_da_tabela':
+				# 	$this->tabela = "nome_da_tabela";
+				# 	$this->titulo = "Titulo da Tabela";
+				# 	$this->campoID = "id";
+				#	$this->aviso = array("alerta(sucesso/erro)","Mensagem");
+				#	$this->operacoes = array('inserir','listar','editar','deletar');
+				#	$this->listar = array('id','campo01','campo02','campo03','select'=>array('tabela','titulo','id'),'acao'=>array('editar'));
+				# 	$this->campos = array(
+				# 		"input (text)" => array('Nome do Campo:','input',255,'placeholder','type'),
+				# 		"select" => array('Nome do Campo:','select','tabela','id','nome')
+				# 		"upload-imagem" => array('Logotipo','upload-img','../assets/images/',200,200),
+				#		"upload-arquivo" => array('Titulo do Campo','upload-file','../assets/images/'),
+				#		"textarea" => array('Titulo do Campo','textarea',1000(ou false=infinito),'placeholder'),
+				#		"data" => array('Titulo do Campo','date','placeholder'),
+				#		"radiobutton" => array('Nome do Campo:','radio', array('','0' => 'Opção 1', '1' => 'Opção 2', '2' => 'Opção 3', ... )),
+				#		"imagem" => array('Imagem','upload-img','../assets/images/',false,false,'thumb'=>array(270,270,'../assets/images/','thumb'))
+				# 	);
+				# break;
+
+
+	

@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tips</title>
+<link rel="stylesheet" media="screen" href="jquery.powertip.css"><!--estilo jquery ballon -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script><!-- biblioteca jquery -->
+<script type="text/javascript" src="https://contadoramigo.websiteseguro.com/scripts/jquery.powertip.js"></script><!--plug in jquery ballon -->
+</head>
+<body>
+
+<!--ballon cnae -->
+<script type="text/javascript">
+		$(function() {
+			// mouse-on example
+			var mouseOnDiv = $('#cnae img');
+			var tipContent = $(
+				'<p style="display: inline">texto</br><a href="#">link</a></p>'
+			);
+			mouseOnDiv.data('powertipjq', tipContent);
+			mouseOnDiv.powerTip({
+				placement: 'e',
+				mouseOnToPopup: true
+			});
+		});
+</script>
+ <!--fim do ballon cnae -->  
+	<br><br><br><br><br><br><br><br><br><br><br>
+	
+<div id="cnae" style="width:13px"><img src="images/dica.gif" width="13" height="14"></div>
+
+</body>
+</html>

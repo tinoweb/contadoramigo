@@ -1,0 +1,51 @@
+<!--
+'-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+' Kit de Integração Boleto Genérico
+' Versão: 3.0
+' Arquivo: formBoleto.html
+' Função: Postagem dos dados para emissão do boleto
+'-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+-->
+<form method="POST" name="boleto" action="https://comercio.locaweb.com.br/comercio.comp">
+   
+    <!-- Parâmetros obrigatórios -->
+    <input type="text" name="identificacao" value="">
+    <input type="text" name="modulo" value="BOLETOLOCAWEB">
+    <input type="text" name="ambiente" value="">
+    <input type="text" name="valor" value="">
+    <input type="text" name="numdoc" value="">
+    <input type="text" name="datadoc" value="">
+    <input type="text" name="vencto" value="">
+    
+    <!-- Parâmetros adicionais -->
+    <input type="text" name="sacado" value="">
+    <input type="text" name="cgccpfsac" value="">
+    <input type="text" name="enderecosac" value="">
+    <input type="text" name="numeroendsac" value="">
+    <input type="text" name="complementosac" value="">
+    <input type="text" name="bairrosac" value="">
+    <input type="text" name="cepsac" value="">
+    <input type="text" name="cidadesac" value="">
+    <input type="text" name="ufsac" value="">
+    <input type="text" name="instr1" value="">
+    <input type="text" name="instr2" value="">
+    <input type="text" name="instr3" value="">
+    <input type="text" name="instr4" value="">
+    <input type="text" name="instr5" value="">
+
+    <!-- Parâmetros especiais -->
+    <input type="text" name="numdocespec" value="">
+    <input type="text" name="nossonum" value="">
+    <input type="text" name="campolivreespec" value="">
+    <input type="text" name="cnab" value="">
+   
+    <!-- Parâmetros de customização -->
+    <input type="text" name="logoloja" value="">
+    <input type="text" name="tituloloja" value="">
+    <input type="text" name="botoesboleto" value="1">
+    <input type="text" name="urltopoloja" value="">
+    <input type="text" name="cabecalho" value="">
+
+    <input type="submit" value="Enviar">
+
+</form>

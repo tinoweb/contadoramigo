@@ -1,0 +1,4 @@
+Dirf|2018|2017|N||Q84FV63|
+RESPO|08205896836|Vitor Maradei|11|34346631|||vitor@vad.com.br|
+DECPJ|96533310000140|Contador Amigo Ltda. - ME                                                                                                                             |0|08205896836|N|N|N|N|N|N|N||
+FIMDirf|

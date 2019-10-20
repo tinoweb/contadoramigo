@@ -1,0 +1,21 @@
+<!--
+'-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+' Kit de Integração Boleto Genérico
+' Versão: 3.0
+' Arquivo: formBoleto.html
+' Função: Postagem dos dados para emissão do boleto
+'-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+-->
+<form method="POST" name="boleto" action="https://comercio.locaweb.com.br/comercio.comp">
+   
+    <!-- Parâmetros obrigatórios -->
+    <input type="text" name="identificacao" value="4843543">
+    <input type="text" name="modulo" value="BOLETOLOCAWEB">
+    <input type="text" name="ambiente" value="TESTE">
+    <input type="text" name="valor" value="9999999999999,99">
+    <input type="text" name="numdoc" value="45896578923456985">
+    <input type="text" name="datadoc" value="29/06/2011">
+    <input type="text" name="vencto" value="05/07/2011">
+    <input type="submit" value="Enviar">
+
+</form>

@@ -1,0 +1,4 @@
+Dirf|2015|2014|N||M1LB5V2|
+RESPO|10039117812|Jose Ignacio Salamanca Isea|11|28929174|||jose.jsalamanca@gmail.com|
+DECPJ|71585384000108|INATEC REFRIGERACAO                                                                                                                                   |0|10039117812|N|N|N|N|N|N|N||
+FIMDirf|

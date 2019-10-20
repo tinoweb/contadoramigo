@@ -1,0 +1,19 @@
+
+				case 'seo':
+						$this->titulo = "Otimização SEO";
+						$this->tabela = "seo";
+						$this->campoID = "id";
+						$this->operacoes = array('listar','editar');
+						$this->listar = array('id','titulo_site','descricao_site','imagem_facebook','acao'=>array('editar'));
+						$this->campos = array(
+							"keywords" => array('Keywords','input',200,'Separe por vírgulas. Ex: keyword 1, keyword 2','text'),
+							"titulo_site" => array('Titulo do Site','input',50,'Titulo do Site','text'),
+							"descricao_site" => array('Descrição do Site','input',155,'Descrição do Site','text'),
+							"imagem_facebook" => array('Imagem do Site','upload-img','../assets/images/css/',600,600)
+						);
+					break;
+
+			endswitch;
+		}
+	}
+?>

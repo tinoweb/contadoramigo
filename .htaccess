@@ -1,0 +1,101 @@
+#session
+php_value session.save_path "/home/contadoramigo2/tmp"
+
+# PHP error handling for production servers
+ 
+# disable display of startup errors
+#php_flag display_startup_errors off
+ 
+# disable display of all other errors
+#php_flag display_errors off
+ 
+# disable html markup of errors
+#php_flag html_errors off
+ 
+# enable logging of errors
+#php_flag log_errors on
+ 
+# disable ignoring of repeat errors
+#php_flag ignore_repeated_errors off
+ 
+# disable ignoring of unique source errors
+#php_flag ignore_repeated_source off
+ 
+# enable logging of php memory leaks
+#php_flag report_memleaks on
+ 
+# preserve most recent error via php_errormsg
+#php_flag track_errors on
+ 
+# disable formatting of error reference links
+#php_value docref_root 0
+ 
+# disable formatting of error reference links
+#php_value docref_ext 0
+ 
+# specify path to php error log
+#php_value error_log PHP_errors.log
+ 
+# specify recording of all php errors
+# [see footnote 3] # php_value error_reporting 999999999
+#php_value error_reporting -1
+ 
+# disable max error string length
+#php_value log_errors_max_len 0
+ 
+# protect error log by preventing public access
+<Files PHP_errors.log>
+ Order allow,deny
+ Deny from all
+ Satisfy All
+</Files>
+
+
+php_value date.timezone 'America/Sao_Paulo'
+
+errordocument 404 /pagina_nao_encontrada.php
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^ambientedeteste2\.websiteseguro\.com
+RewriteRule ^(.*)$ http://ambientedeteste2.hospedagemdesites.ws/$1 [R=permanent,L]
+
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^www.ambientedeteste2\.websiteseguro\.com
+RewriteRule ^(.*)$ http://ambientedeteste2.hospedagemdesites.ws/$1 [R,L]
+
+RewriteCond %{HTTP_HOST} ^ambientedeteste2.websiteseguro.com$
+RewriteRule (.*) http://ambientedeteste2.hospedagemdesites.ws/$1 [R=301,L]
+
+redirect 301 /atendimento_mei.php /fale-conosco.php
+redirect 301 /assinatura_orientacoes.php /assinatura.php
+redirect 301 /assinatura_pagina_restrita.php /assinatura.php
+
+redirect 301 /enquadramento_simples.php /opcao-pelo-simples.php
+redirect 301 /enq_simples.php /opcao-pelo-simples.php
+redirect 301 /enq_ /opcao-pelo-simples.php
+
+redirect 301 /descadastramento_mei.php /desenq_mei.php	
+redirect 301 /desenq_mei.php. /desenq_mei.php
+
+redirect 301 /imprensa.php /index.php
+
+redirect 301 /orientacao_para_geracao_do_dbe.php /orientacoes_dbe.php
+redirect 301 /orientacoes_dbe_aberta.php /orientacoes_dbe.php
+
+redirect 301 /na_midia.php /midia.php
+
+redirect 301 /abertura_empresa.php /abrir-me.php
+redirect 301 /quem_somos.php /contabilidade-online.php
+redirect 301 /duvidas_frequentes.php /duvidas-frequentes.php
+redirect 301 /alterar_socio_atividade_end.php /alterar-empresa.php
+redirect 301 /checkup.php /certidao-negativa.php
+redirect 301 /servicos_assinatura_contador.php /servico-contador.php
+
+redirect 301 /educacao http://www.vad.com.br
+redirect 301 /vad/index.php http://www.vad.com.br
+
+redirect 301 /cia_diadema/em_cartaz.php  http://www.apbd.org.br/em_cartaz.php
+redirect 301 /cia_diadema/elenco.php http://www.apbd.org.br/elenco.php
+redirect 301 /cia_diadema/programacao_completa_abcdanca_2015_10_anos.pdf http://www.apbd.org.br/programacao_completa_abcdanca_2015_10_anos.pdf
+redirect 301 /cia_diadema/relacao_selecionados_ABCDanca_2015_10%20anos.pdf http://www.apbd.org.br/relacao_selecionados_ABCDanca_2015_10%20anos.pdf

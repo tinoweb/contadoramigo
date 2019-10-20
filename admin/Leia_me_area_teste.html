@@ -1,0 +1,166 @@
+﻿<pre>
+Alterações que deverão ser realizadas nos arquivos abaixo quando passar eles do servidor de produção para o de teste.  
+
+<h1>Alteração no site.</h1>
+---------------------------------------------------------------
+
+Arquivos: header_restrita.php
+
+Alteração realizada:
+
+Linha - aproximada 15:
+
+if(count($checkDominio) <= 0){
+	//$dominio_seguro = "http://www.contadoramigo.com.br/";
+	$URI = explode($_SERVER['SCRIPT_URL'], $_SERVER['SCRIPT_URI']);
+
+	$dominio_seguro = $URI[0].'/';	
+	$dominio = $dominio_seguro;
+}
+
+Linha - aproximada 48
+
+#DESVIO# - DEsativado para funcionar local pois não há SSL. Descomentar se usar na produção.
+if(!(bool)$_SERVER['HTTPS']){
+
+	if($_SERVER['SERVER_NAME'] != 'ambientedeteste2.hospedagemdesites.ws' && $_SERVER['SERVER_NAME'] != 'www.ambientedeteste2.hospedagemdesites.ws') {
+		echo('Location: '.$dominio_seguro . str_replace("/","",$_SERVER["REQUEST_URI"]));
+		exit;
+	}
+}
+
+---------------------------------------------------------------
+
+Arquivos: auto_login.php
+
+Alteração realizada:
+
+Todo Cookie que estiver sendo definido só para o dóminio devera ser alterado para seginte forma.
+
+Exemplo:
+De: setcookie('contadoramigoHTTPS','', time()-(120*120*24*30), '/', 'contadoramigo.com.br', 0);
+Para: setcookie('contadoramigoHTTPS','', time()-(120*120*24*30), '/', $_SERVER['SERVER_NAME'], 0);  
+
+Linha - aproximada 48
+De: 
+	$dominio_seguro = "http://www.contadoramigo.com.br/";
+
+Para:
+	$URI = explode($_SERVER['SCRIPT_URL'], $_SERVER['SCRIPT_URI']);
+	$dominio_seguro = $URI[0].'/';	
+	$dominio = $dominio_seguro;
+
+---------------------------------------------------------------
+
+Arquivos: logout.php
+
+Alteração realizada:
+
+DE: 
+	header('Location: http://www.contadoramigo.com.br/auto_login.php?logout' );
+
+PARA: 
+    $URI = explode($_SERVER['SCRIPT_URL'], $_SERVER['SCRIPT_URI']);
+    header('Location: '.$URI[0].'/auto_login.php?logout' );
+
+OU: 
+	header('Location: /auto_login.php?logout' );
+
+---------------------------------------------------------------
+
+Arquivos: conect.php e conectPDO.php
+
+Arquivos de conexao com o banco de dados.
+
+conect.php utiliza o comando mysql para realizar a conexão - este tipo de conexao esta depreciado e denpendedo do servidor PHP pode nao funcionar.
+conectPDO.php utiliza o comando PDO para realizar a conexão -  esta conexao por hora so esta sendo usado para area do contador. 
+
+---------------------------------------------------------------
+
+<h1>Alteração no ADMIN.</h1>
+
+---------------------------------------------------------------
+Arquivos: auto_login.php
+
+Todo comando "header" do php deve ter a url alterada.
+Exemplo:
+Linha - aproximada 38.
+
+de: 
+	header('Location: https://contadoramigo.com.br/auto_login.php?logout' );
+
+para:
+	header('Location: /auto_login.php?logout' );
+
+---------------------------------------------------------------
+Arquivos: check_login.php
+
+Todo comando "header" do php deve ter a url alterada.
+Exemplo:
+
+de: 
+	header('Location: https://contadoramigo.com.br/admin/index.php' );
+
+para:
+	header('Location: /admin/index.php' );
+
+---------------------------------------------------------------
+Arquivos: index.php
+
+Todo comando "header" do php deve ter a url alterada.
+Exemplo:
+Linha - aproximada 21.
+
+de: 
+	header('Location: https://contadoramigo.com.br/admin/login.php' );
+
+para:
+	header("Location: /admin/login.php");
+
+---------------------------------------------------------------
+
+Arquivos: login.php
+
+Todo comando "header" do php deve ter a url alterada.
+Exemplo:
+
+de: 
+	header('Location: https://contadoramigo.com.br/admin/index.php' );
+
+para:
+	header('Location: /admin/index.php');
+
+---------------------------------------------------------------
+
+Arquivos: logout.php
+
+Todo comando "header" do php deve ter a url alterada.
+Exemplo:
+
+de: 
+	header('Location: https://contadoramigo.com.br/admin/login.php' );
+
+para:
+	header("Location: /admin/login.php");
+
+---------------------------------------------------------------
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>

@@ -1,0 +1,4 @@
+Dirf|2014|2013|N||F8UCL6S|
+RESPO|04295638765|LUCIANO BARRETO ROCHA                                       |21|035024189|||luciano@okayprint.com.br                          |
+DECPJ|12371473000184|OKAYPRINT SOLUCOES GRAFICAS LTDA ME                                                                                                                   |0|04295638765|N|N|N|N|N|N|N||
+FIMDirf|

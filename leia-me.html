@@ -1,0 +1,46 @@
+﻿
+<pre>
+
+
+---------------------------------- Configuração do htaccess para para o ambiente de teste ou produção  
+    
+<h2><b>Configuraçao do ambiente de produção: linha 54</b></h2>
+    
+    php_value date.timezone 'America/Sao_Paulo'
+    
+    errordocument 404 /pagina_nao_encontrada.php
+    
+    RewriteEngine on
+    
+    RewriteCond %{HTTP_HOST} ^contadoramigo\.com\.br
+    RewriteRule ^(.*)$ http://www.contadoramigo.com.br/$1 [R=permanent,L]
+    
+    RewriteCond %{SERVER_PORT} 80
+    RewriteCond %{HTTP_HOST} ^www.contadoramigo\.com\.br
+    RewriteRule ^(.*)$ https://www.contadoramigo.com.br/$1 [R,L]
+    
+    RewriteCond %{HTTP_HOST} ^contadoramigo.websiteseguro.com$
+    RewriteRule (.*) https://www.contadoramigo.com.br/$1 [R=301,L]
+
+<h2><b>Configuração do ambiente de Teste: linha 54</b></h2>
+    
+    php_value date.timezone 'America/Sao_Paulo'
+    
+    errordocument 404 /pagina_nao_encontrada.php
+    
+    RewriteEngine on
+    
+    RewriteCond %{HTTP_HOST} ^ambientedeteste2\.websiteseguro\.com
+    RewriteRule ^(.*)$ http://ambientedeteste2.hospedagemdesites.ws/$1 [R=permanent,L]
+    
+    RewriteCond %{SERVER_PORT} 80
+    RewriteCond %{HTTP_HOST} ^www.ambientedeteste2\.websiteseguro\.com
+    RewriteRule ^(.*)$ http://ambientedeteste2.hospedagemdesites.ws/$1 [R,L]
+    
+    RewriteCond %{HTTP_HOST} ^ambientedeteste2.websiteseguro.com$
+    RewriteRule (.*) http://ambientedeteste2.hospedagemdesites.ws/$1 [R=301,L]
+
+------------------------------------------ Fim --------------------------------------------------
+
+
+</pre>

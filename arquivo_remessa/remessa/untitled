@@ -1,0 +1,48 @@
+<div nome="registro-detalhe-segmento-r">
+	<!-- Controle -->
+	<p class="par"   	title="codigo-do-banco-na-compensacao"		inicio="1"		fim="3" 	digitos="3" 	>	<?php echo $this->codigo_do_banco_na_compensacao;  ?>	</p>
+	<p class="impar"   	title="lote-de-servico"						inicio="4"		fim="7" 	digitos="4" 	>	<?php echo $this->lote_de_servico;  ?>	</p>
+	<p class="par"   	title="tipo-de-registro"					inicio="8"		fim="8" 	digitos="1" 	>	<?php echo $this->tipo_de_registro;  ?>	</p>
+	<p class="impar"   	title="n-sequencial-do-registro-no-lote"	inicio="9"		fim="13" 	digitos="5" 	>	<?php echo $this->n_sequencial_do_registro_no_lote;  ?>	</p>
+	<p class="par"   	title="cod-segmento-do-registro-detalhe"	inicio="14"		fim="14" 	digitos="1" 	>	<?php echo $this->cod_segmento_do_registro_detalhe;  ?>	</p>
+	<p class="impar"   	title="uso-exclusivo-febraban-cnab"			inicio="15"		fim="15" 	digitos="1" 	>	<?php brancos(1) ?>	</p>
+	<p class="par"   	title="codigo-de-movimento-remessa"			inicio="16"		fim="17" 	digitos="2" 	>	<?php echo $this->codigo_de_movimento_remessa;  ?>	</p>
+	<p class="impar"   	title="codigo-do-desconto-2"				inicio="18"		fim="18" 	digitos="1" 	>	<?php zeros(1);  ?>	</p>
+	<p class="par"   	title="data-do-desconto-2"					inicio="19"		fim="26" 	digitos="8" 	>	<?php zeros(8);  ?>	</p>
+	<p class="impar"   	title="desconto-2-valorpercentual"			inicio="27"		fim="41" 	digitos="15" 	>	<?php zeros(15);  ?>	</p>
+	<p class="par"   	title="codigo-do-desconto-3"				inicio="42"		fim="42" 	digitos="1" 	>	<?php zeros(1);  ?>	</p>
+	<p class="impar"   	title="data-do-desconto-3"					inicio="43"		fim="50" 	digitos="8" 	>	<?php zeros(8);  ?>	</p>
+	<p class="par"   	title="desconto-3-valor-percentual"			inicio="51"		fim="65" 	digitos="15" 	>	<?php zeros(15);  ?>	</p>
+	<p class="impar"   	title="codigo-da-multa"						inicio="66"		fim="66" 	digitos="1" 	>	<?php echo $this->codigo_da_multa;  ?>	</p>
+	<p class="par"   	title="data-da-multa"						inicio="67"		fim="74" 	digitos="8" 	>	<?php echo $this->data_da_multa;  ?>	</p>
+	<p class="impar"   	title="valor-percentual-a-ser-aplicado"		inicio="75"		fim="89" 	digitos="15" 	>	<?php echo $this->valor_percentual_a_ser_aplicado;  ?>	</p>
+	<p class="par"   	title="informacao-ao-sacado"				inicio="90"		fim="99" 	digitos="10" 	>	<?php zeros(10) ?>	</p>
+	<p class="impar"   	title="mensagem-3"							inicio="100"	fim="139" 	digitos="40" 	>	<?php zeros(40) ?>	</p>
+	<p class="par"   	title="mensagem-4"							inicio="140"	fim="179" 	digitos="40" 	>	<?php zeros(40) ?>	</p>
+	<p class="impar"   	title="uso-exclusivo-febraban-cnab"			inicio="180"	fim="199" 	digitos="20" 	>	<?php zeros(3) ?>	</p>
+	<p class="par"   	title="cod-ocor-do-sacado"					inicio="200"	fim="207" 	digitos="8" 	>	<?php brancos(20) ?>	</p>
+	<p class="impar"   	title="cod-do-banco-na-conta-do-debito"		inicio="208"	fim="210" 	digitos="3" 	>	<?php zeros(8) ?>	</p>
+	<p class="par"   	title="codigo-da-agencia-do-debito"			inicio="211"	fim="215" 	digitos="5" 	>	<?php zeros(8) ?>	</p>
+	<p class="impar"   	title="verificador-da-agencia"				inicio="216"	fim="216" 	digitos="1" 	>	<?php zeros(8) ?>	</p>
+	<p class="par"   	title="conta-corrente-para-debito"			inicio="217"	fim="228" 	digitos="12" 	>	<?php zeros(8) ?>	</p>
+	<p class="impar"   	title="digito-verificador-da-conta"			inicio="229"	fim="229" 	digitos="1" 	>	<?php zeros(8) ?>	</p>
+	<p class="impar"   	title="aviso-para-debito-automatico"		inicio="230"	fim="230" 	digitos="1" 	>	<?php zeros(8) ?>	</p>
+	<p class="par"   	title="digito-verificador-da-conta"			inicio="231"	fim="231" 	digitos="1" 	>	<?php zeros(8) ?>	</p>
+	<p class="impar"   	title="uso-exclusivo-febraban-cnab"			inicio="232"	fim="240" 	digitos="9" 	>	<?php brancos(8) ?>	</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

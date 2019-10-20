@@ -1,0 +1,9 @@
+<?php
+	class Paginas {
+
+		# Variáveis
+		public $tabela, $titulo, $campoID, $campos, $aviso = false;
+
+		# Paginas do Menu
+		public $paginas_menu = array(
+			

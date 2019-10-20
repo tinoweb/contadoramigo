@@ -1,0 +1,11 @@
+.teste{
+	background: red;
+	margin-left: 10px;
+	z-index: 1;
+}
+.teste2{
+	background: red;
+	margin-left: 10px;
+	padding: 10px;
+	z-index: 10;
+}
